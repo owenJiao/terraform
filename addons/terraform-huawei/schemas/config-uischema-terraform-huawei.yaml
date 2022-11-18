@@ -1,0 +1,10 @@
+- jsonKey: name
+  sort: 10
+- jsonKey: HUAWEI_REGION
+  sort: 20
+- jsonKey: HUAWEI_SECRET_ID
+  sort: 30
+  uiType: Password
+- jsonKey: HUAWEI_SECRET_KEY
+  sort: 40
+  uiType: Password
