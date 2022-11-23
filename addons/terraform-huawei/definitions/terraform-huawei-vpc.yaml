@@ -15,7 +15,7 @@ spec:
         terraform {
           required_providers {
             huaweicloud = {
-              source = "huaweicloud/huaweicloud"
+              source = "registry.terraform.io/huaweicloud/huaweicloud"
             }
           }
         }
