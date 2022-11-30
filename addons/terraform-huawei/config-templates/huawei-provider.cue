@@ -44,8 +44,8 @@ template: {
 		stringData: credentials: strings.Join([creds1, creds2], "\n")
 	}
 
-	creds1: "secretID: " + parameter.HUAWEI_SECRET_ID
-	creds2: "secretKey: " + parameter.HUAWEI_SECRET_KEY
+        creds1: "accessKey: " + parameter.HUAWEI_SECRET_ID
+        creds2: "secretKey: " + parameter.HUAWEI_SECRET_KEY
 
 	l: {
 		"config.oam.dev/catalog":  "velacore-config"
