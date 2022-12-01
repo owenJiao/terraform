@@ -20,7 +20,7 @@ template: {
 			}
 			spec: {
 				provider: "huawei"
-				region:   parameter.HUAWEI_REGION
+				region:   parameter.HUAWEICLOUD_REGION
 				credentials: {
 					source: "Secret"
 					secretRef: {
@@ -44,8 +44,8 @@ template: {
 		stringData: credentials: strings.Join([creds1, creds2], "\n")
 	}
 
-        creds1: "accessKey: " + parameter.HUAWEI_SECRET_ID
-        creds2: "secretKey: " + parameter.HUAWEI_SECRET_KEY
+        creds1: "accessKey: " + parameter.HUAWEICLOUD_ACCESS_KEY
+        creds2: "secretKey: " + parameter.HUAWEICLOUD_SECRET_KEY
 
 	l: {
 		"config.oam.dev/catalog":  "velacore-config"
@@ -54,13 +54,13 @@ template: {
 	}
 
 	parameter: {
-		//+usage=The name of Terraform Provider for Tencent Cloud, default is `default`
+		//+usage=The name of Terraform Provider for Huawei Cloud, default is `default`
 		name: *"default" | string
-		//+usage=Get TENCENTCLOUD_SECRET_ID per this guide https://cloud.tencent.com/document/product/1213/67093
-		HUAWEI_SECRET_ID: string
-		//+usage=Get TENCENTCLOUD_SECRET_KEY per this guide https://cloud.tencent.com/document/product/1213/67093
-		HUAWEI_SECRET_KEY: string
-		//+usage=Get TENCENTCLOUD_REGION by picking one RegionId from Tencent Cloud region list https://cloud.tencent.com/document/api/1140/40509#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8
-		HUAWEI_REGION: string
+		//+usage=Get HUAWEICLOUD_ACCESS_KEY per this guide https://support.huaweicloud.com/productdesc-iam/iam_01_0040.html
+		HUAWEICLOUD_ACCESS_KEY: string
+		//+usage=Get HUAWEICLOUD_SECRET_KEY per this guide https://support.huaweicloud.com/productdesc-iam/iam_01_0040.html
+		HUAWEICLOUD_SECRET_KEY: string
+		//+usage=Get HUAWEICLOUD_REGION  by picking one RegionId from Huawei Cloud region list https://developer.huaweicloud.com/endpoint?all
+		HUAWEICLOUD_REGION: string
 	}
 }
