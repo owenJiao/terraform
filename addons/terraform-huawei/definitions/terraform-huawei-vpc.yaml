@@ -35,7 +35,7 @@ spec:
 
         variable "vpc_name" {
           description = "Vpc name"
-          default = "test-vpc-poc"
+          default = "vela-vpc"
           type = string
         }
 
@@ -46,7 +46,7 @@ spec:
         }
         variable "subnet_name" {
           description = "Subnet name"
-          default = "test-subnet-poc"
+          default = "vela-subnet"
           type = string
         }
 
@@ -58,7 +58,7 @@ spec:
 
         variable "availability_zone" {
           description = "Availability zone"
-          default = "AZ1"
+          default = ""
           type = string
         }
 
