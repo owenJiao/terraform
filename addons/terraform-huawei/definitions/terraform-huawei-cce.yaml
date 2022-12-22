@@ -1,0 +1,25 @@
+apiVersion: core.oam.dev/v1beta1
+kind: ComponentDefinition
+metadata:
+  annotations:
+    definition.oam.dev/description: Huawei cloud CCE
+  creationTimestamp: null
+  labels:
+    type: terraform
+  name: huawei-cce
+  namespace: vela-system
+spec:
+  schematic:
+    terraform:
+      configuration: https://github.com/owenJiao/terraform_source.git
+      path: cce
+      providerRef:
+        name: huawei
+        namespace: default
+      type: remote
+  workload:
+    definition:
+      apiVersion: terraform.core.oam.dev/v1beta2
+      kind: Configuration
+status: {}
+
