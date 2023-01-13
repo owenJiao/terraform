@@ -6,7 +6,7 @@ metadata:
   creationTimestamp: null
   labels:
     type: terraform
-  name: huawei-service_infra
+  name: huawei-service-infra
   namespace: vela-system
 spec:
   schematic:
